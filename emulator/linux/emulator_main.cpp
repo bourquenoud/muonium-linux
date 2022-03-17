@@ -95,8 +95,9 @@ void renderThreaded(int threadNumber, const ue::Poly& obj)
 
 		//Clear the buffers
 		renderers[threadNumber].clearDepthBuffer();
+		renderers[threadNumber].clearFrameBufferGrid((ue::Colour){0xFFDCDCDC}, (ue::Colour){0xFFC9C9C9}, HEIGHT/N_SPAN/2);
 		//renderers[threadNumber].clearFrameBuffer((ue::Colour){0xFFCFCFCF});
-		renderers[threadNumber].clearFrameBufferSkybox(skybox);
+		//renderers[threadNumber].clearFrameBufferSkybox(skybox);
 
 		//Render the object
 		renderers[threadNumber].renderObject_old(obj);
@@ -142,7 +143,7 @@ int main(void)
 	ue::Poly* objectList = new ue::Poly[1];
 
 	//Load a skybox
-	skybox = polyLoader.loadCubeMap("emulator/resource/Epic_BlueSunset_*.png");
+	//skybox = polyLoader.loadCubeMap("emulator/resource/Epic_BlueSunset_*.png");
 
 	//Load an obj file with texture
 	ue::Vector3 cube = ue::Vector3(R(40.0), R(40.0), R(40.0));
