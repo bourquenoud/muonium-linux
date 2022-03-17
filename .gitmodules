@@ -1,0 +1,3 @@
+[submodule "muonium-engine"]
+	path = muonium-engine
+	url = git@github.com:bourquenoud/muonium-engine.git
