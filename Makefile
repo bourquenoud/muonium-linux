@@ -47,4 +47,4 @@ $(BUILD_DIR)/%.o : %.cpp
 
 # This should remove all generated files.
 clean:
-	-rm $(BUILD_DIR)/$(BIN) $(OBJ) $(DEP)
+	-rm -rf $(BUILD_DIR)/$(BIN) $(OBJ) $(DEP)
